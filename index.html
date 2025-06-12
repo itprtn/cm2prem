@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premunia CRM</title>
+    <!-- CACHE BUSTING: If you see errors like "Failed to resolve module specifier '@/'...", -->
+    <!-- it's VERY LIKELY a caching issue. Your browser has an old file. -->
+    <!-- TRY THESE: -->
+    <!-- 1. Hard Refresh: Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac). -->
+    <!-- 2. Developer Tools: Open (F12), go to Network tab, check "Disable cache". Keep it open. -->
+    <!-- 3. Incognito/Private Window: Test in a new incognito window. -->
+    <!-- 4. Clear Site Data: Dev Tools > Application > Storage > Clear site data. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'sidebar-bg': '#1E293B', // slate-800 (Kept from original for sidebar)
+              'page-bg': '#FFFFFF', // Changed from slate-100 to white
+              'primary': '#f9b231', // New primary orange
+              'primary-hover': '#e72e26', // New primary hover red
+              'accent-green': '#9fd712', // New accent green
+              'premunia-orange': '#FB923C', // Kept for reference or specific premunia branding if needed
+              'premunia-red': '#EF4444', // Kept for reference
+              'premunia-pink': '#EC4899',
+              'premunia-purple': '#8B5CF6',
+              'card-border': '#E2E8F0', // slate-200
+              'text-main': '#383838', // Updated main text color
+              'text-headings': '#0e0e0e', // New heading text color
+              'text-secondary': '#64748B', // slate-500 (Kept for secondary text elements)
+              'text-faded': '#94A3B8', // slate-400 (Kept for faded text elements)
+              'status-green': '#10B981',
+              'status-yellow': '#F59E0B',
+              'status-blue': '#3B82F6',
+              'status-purple': '#A855F7',
+            },
+            fontFamily: {
+              sans: ['Roboto', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            borderRadius: {
+              'sm': '3px', // Adding smaller border radius consistent with provided CSS
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "recharts": "https://esm.sh/recharts@^2.15.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-page-bg font-sans text-text-main">
+    <div id="root"></div>
+    <!-- 
+      Reminder for module loading:
+      - Local .tsx/.ts file imports MUST use relative paths (e.g., './MyComponent' or '../utils/myUtil').
+      - Browsers DO NOT understand path aliases (e.g., '@/some/path') without a build system.
+      - If you see "Failed to resolve module specifier '@/...'" or similar:
+        1. Double-check the import path in your .tsx/.ts file.
+        2. Aggressively clear your browser cache (Hard Refresh: Ctrl+Shift+R or Cmd+Shift+R, 
+           or via Developer Tools > Network > Disable cache).
+        3. Restart your development server if you are using one.
+    -->
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
