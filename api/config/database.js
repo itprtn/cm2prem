@@ -3,10 +3,10 @@ const mysql = require('mysql2/promise');
 require('dotenv').config();
 
 const dbConfig = {
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'premunia_crm',
+    host: process.env.DB_HOST || 'ep-shy-bread-a28dks7w-pooler.eu-central-1.aws.neon.tech',
+    user: process.env.DB_USER || 'neondb_owner',
+    password: process.env.DB_PASSWORD || 'npg_IsETN7L9ObZB',
+    database: process.env.DB_NAME || 'neondb',
     charset: 'utf8mb4',
     timezone: '+00:00',
     acquireTimeout: 60000,
